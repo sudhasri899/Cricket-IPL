@@ -16,23 +16,23 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="Team")
+@Table(name="team")
 @Getter
 @Setter
 public class Team {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="teamid")
+	@Column(name="team_id")
 	private long teamId;
 	
-	@Column(name="teamcode")
+	@Column(name="team_code")
 	private long teamCode;
 	
-	@Column(name="teamname")
+	@Column(name="team_name")
 	private String teamName;
 	
-	@Column(name="userid")
+	@Column(name="user_id")
 	private long userId;
 	
 	@OneToMany(fetch =FetchType.LAZY)

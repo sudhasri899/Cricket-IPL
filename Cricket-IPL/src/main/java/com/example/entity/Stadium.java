@@ -16,26 +16,26 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="Stadium")
+@Table(name="stadium")
 @Getter
 @Setter
 public class Stadium {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="stadiumid")
+	@Column(name="stadium_id")
 	private long stadiumId;
 	
-	@Column(name="stadiumcode")
+	@Column(name="stadium_code")
 	private long stadiumCode;
 	
-	@Column(name="stadiumname")
+	@Column(name="stadium_name")
 	private String stadiumName;
 	
 	@Column(name="city")
 	private String city;
 	
-	@Column(name="userid")
+	@Column(name="user_id")
 	private long userId;
 	
 	@OneToMany(fetch = FetchType.LAZY)

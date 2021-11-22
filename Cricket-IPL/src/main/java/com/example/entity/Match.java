@@ -14,14 +14,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="Match")
+@Table(name="match")
 @Getter
 @Setter
 public class Match {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="matchid")
+	@Column(name="match_id")
 	private long matchId;
 	
 	@Column(name="teama_id")
@@ -31,12 +31,12 @@ public class Match {
 	private long teamB_Id;
 	
 	@Column(name="stadiumid")
-	private long stadium_Id;
+	private long stadiumId;
 	
 	@Column(name="date")
 	private String date;
 	
-	@Column(name="userid")
+	@Column(name="user_id")
 	private long user_Id;
 	
 	@ManyToOne
